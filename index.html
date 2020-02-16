@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+	<head>
+	    <meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+		<script src="vpd.class.js"></script>
+		<link rel="stylesheet" href="vpd.css">
+	</head>
+
+    <body>
+    
+    	<select id='selector'>
+    		<option> - choose growth stage -</option>
+    		<option value='1'>early veg</option>
+    		<option value='2'>late veg</option>
+    		<option value='3'>late flower</option>
+    	</select>
+    
+    	<br /><br />
+    	
+    	<div id='vpd-container'></div>
+    
+    	<script>
+    		var selector = document.getElementById('selector');
+    		selector.addEventListener("change", function () {
+    			var vpd = new VPD();
+    			document.getElementById('vpd-container').innerHTML = vpd.createHTMLTable(this.value).outerHTML;
+    		})
+    	</script>
+    
+    </body>
+    
+</html>

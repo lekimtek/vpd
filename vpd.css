@@ -1,0 +1,13 @@
+body {
+	font-family: Arial;
+	font-size:.8em;
+}
+table {
+	cell-spacing:3px;
+}
+.in-range {
+	color:green;
+}
+.out-of-range {
+	color:red;
+}
